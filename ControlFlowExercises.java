@@ -51,10 +51,11 @@ public class ControlFlowExercises {
             }
             System.out.println("Would you like to enter another number? [y,n]");
             String response = input.next();
-            if (response == "n"){
+            if (response.equalsIgnoreCase("n")){
                 cont = false;
             }
         }
+        System.out.println("GOODBYE!");
     }
 
     
