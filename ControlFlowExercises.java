@@ -40,23 +40,40 @@ public class ControlFlowExercises {
         //     }
         // }
 
-        boolean cont = true;
-        Scanner input = new Scanner(System.in);
-        while(cont == true){
-            System.out.println("Please enter a whole number");
-            int in1 = input.nextInt();
-            System.out.println("Number | Squared | Cubed");
-            for (int i=1; i<=in1; i++){
-                System.out.printf("%5d | %5d | %5d%n",i,(int)Math.pow(i,2),(int)Math.pow(i,3));
-            }
-            System.out.println("Would you like to enter another number? [y,n]");
-            String response = input.next();
-            if (response.equalsIgnoreCase("n")){
-                cont = false;
-            }
-        }
-        System.out.println("GOODBYE!");
-    }
+        // boolean cont = true;
+        // Scanner input = new Scanner(System.in);
+        // while(cont == true){
+        //     System.out.println("Please enter a whole number");
+        //     int in1 = input.nextInt();
+        //     System.out.println("Number | Squared | Cubed");
+        //     for (int i=1; i<=in1; i++){
+        //         System.out.printf("%5d | %5d | %5d%n",i,(int)Math.pow(i,2),(int)Math.pow(i,3));
+        //     }
+        //     System.out.println("Would you like to enter another number? [y,n]");
+        //     String response = input.next();
+        //     if (response.equalsIgnoreCase("n")){
+        //         cont = false;
+        //     }
+        // }
+        // System.out.println("GOODBYE!");
 
-    
+        // Graded Scores
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a score between 1 and 100");
+        int score1 = input.nextInt();
+        if (score1 >= 88){
+            System.out.println("That score is an A!");
+        } 
+        else if (score1 <= 87 && score1 >= 80){
+            System.out.println("That score is an B");
+        }
+        else if (score1 <= 79 && score1 >= 67){
+            System.out.println("That score is an C");
+        }
+        else if (score1 <= 66 && score1 >= 60){
+            System.out.println("That score is an D");
+        }else{
+            System.out.println("That score is an F");
+        }
+    }
 }
