@@ -77,19 +77,16 @@ public class MethodsExercise {
 
     public static void diceRolling(){
         Scanner sc = new Scanner(System.in);
-        Random rn = new Random();
         boolean running = true;
         while(running){
             System.out.println("Please enter the number of sides you want the dice to have");
             int sides = sc.nextInt();
-            int dice1 = rn.nextInt(sides);
-            int dice2 = rn.nextInt(sides);
-            // System.out.println("Please enter to roll your dice!");
-            // sc.nextLine();
+            int dice1 = (int)(java.lang.Math.random()*sides+1);
+            int dice2 = (int)(java.lang.Math.random()*sides+1);
             System.out.println(String.format("You rolled %d and %d totalling %d", dice1, dice2, (dice1+dice2)));
-            System.out.println("Would you like to roll more dice?");
+            System.out.println("Would you like to roll more dice? y/n");
             String input2 = sc.next();
-            if (!input2.equals("y") || !input2.equals("yes")){
+            if (!input2.toLowerCase().equals("y")){
                     running = false;
                 }
             }
