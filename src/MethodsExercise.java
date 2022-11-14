@@ -58,9 +58,26 @@ public class MethodsExercise {
         return number;
     }
 
+    public static long factoral(){
+        long i, fact = 1;
+        Scanner sc = new Scanner(System.in);
+        while (fact == 1){
+            System.out.println("Please enter a number between 1 and 10 to see it's factoral");
+            int number = sc.nextInt();
+            if (number >= 1 && number <= 10){
+                for (i=1; i<= number; i++){
+                    fact = fact * i;
+                }
+                return fact;
+            }
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
         // System.out.println(Multiplication(5, 3));
         // System.out.println(Multiplication2(5, 3));
-        System.out.println(String.format("The number %d is between the min and max!",getInteger(1,30)));
+        // System.out.println(String.format("The number %d is between the min and max!",getInteger(1,30)));
+        System.out.println(factoral());
     }
 }
