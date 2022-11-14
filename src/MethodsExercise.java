@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercise {
@@ -74,10 +75,32 @@ public class MethodsExercise {
         return 0;
     }
 
+    public static void diceRolling(){
+        Scanner sc = new Scanner(System.in);
+        Random rn = new Random();
+        boolean running = true;
+        while(running){
+            System.out.println("Please enter the number of sides you want the dice to have");
+            int sides = sc.nextInt();
+            int dice1 = rn.nextInt(sides);
+            int dice2 = rn.nextInt(sides);
+            // System.out.println("Please enter to roll your dice!");
+            // sc.nextLine();
+            System.out.println(String.format("You rolled %d and %d totalling %d", dice1, dice2, (dice1+dice2)));
+            System.out.println("Would you like to roll more dice?");
+            String input2 = sc.next();
+            if (!input2.equals("y") || !input2.equals("yes")){
+                    running = false;
+                }
+            }
+            System.out.println("Goodbye!");
+        }
+
     public static void main(String[] args) {
         // System.out.println(Multiplication(5, 3));
         // System.out.println(Multiplication2(5, 3));
         // System.out.println(String.format("The number %d is between the min and max!",getInteger(1,30)));
-        System.out.println(factoral());
+        // System.out.println(factoral());
+        diceRolling();
     }
 }
