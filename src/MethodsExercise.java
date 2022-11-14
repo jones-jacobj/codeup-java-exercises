@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercise {
 
     public static int Addition(int num1, int num2){
@@ -28,8 +30,37 @@ public class MethodsExercise {
         return num1 % num2;
     }
 
+    // public static void inRange(){
+    //     Scanner sc = new Scanner(System.in);
+    //     boolean numberInRange = false;
+    //     while(!numberInRange){
+    //         System.out.println("Please enter a number between 1 and 20");
+    //         int input = sc.nextInt();
+    //         if(input >= 1 && input <= 20){
+    //             System.out.println(String.format("The number you entered %d is between 1 and 20!",input));
+    //             break;
+    //         }
+    //     }
+    // }
+
+    public static int getInteger(int min, int max){
+        Scanner sc = new Scanner(System.in);
+        boolean numberInRange = false;
+        int number = 0;
+        while(!numberInRange){
+            System.out.println(String.format("Please enter a number between %d and %d", min, max));
+                int input = sc.nextInt();
+                if (input >= min && input <= max){
+                    return input;
+                }
+        }
+
+        return number;
+    }
+
     public static void main(String[] args) {
-        System.out.println(Multiplication(5, 3));
-        System.out.println(Multiplication2(5, 3));
+        // System.out.println(Multiplication(5, 3));
+        // System.out.println(Multiplication2(5, 3));
+        System.out.println(String.format("The number %d is between the min and max!",getInteger(1,30)));
     }
 }
