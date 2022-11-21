@@ -16,7 +16,6 @@ public class Person {
     public String sayHello(){
         return String.format("Hello, my name is %s!",this.getName());
     }
-    /test
     public static void main(String[] args) {
         Person p1 = new Person("Jake");
         System.out.println(p1.sayHello());
