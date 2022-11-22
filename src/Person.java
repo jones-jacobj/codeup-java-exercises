@@ -19,6 +19,5 @@ public class Person {
     public static void main(String[] args) {
         Person p1 = new Person("Jake");
         System.out.println(p1.sayHello());
-        //wut
     }
 }
