@@ -11,16 +11,26 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
+    public Student(String name, Collection<Integer> givenGrades){
+        this.name=name;
+        this.grades = new ArrayList<>(givenGrades);
+    }
+
     public String getName(){return this.name;}
     public void addGrade(int givenGrade){this.grades.add(givenGrade);}
+
+    public Student addGrade2(int givenGrade){
+        this.grades.add(givenGrade);
+        return this;
+    }
     public void addGrades(Collection<Integer> givenGrades){
         for (int grade : givenGrades){
             this.grades.add(grade);
         }
     }
     public double getGradeAverage(){
-        int count = 0;
-        int numbers = 0;
+        double count = 0;
+        double numbers = 0;
         for (int grade : this.grades) {
             numbers += grade;
             count++;
