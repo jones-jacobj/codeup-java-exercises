@@ -22,8 +22,8 @@ public class GradesApplication {
         System.out.println("Welcome!");
         System.out.println("Here are the GitHub usernames of our students:");
         System.out.println("|zgulde| |ryanorsinger| |jreich5| |fmendozaro| |MontealegreLuis|");
-        System.out.println("What student would you like to see more information on?");
         while(running){
+            System.out.println("What student would you like to see more information on?");
             String input = s1.next();
             if (students.containsKey(input)){
                 System.out.printf("Name: %s - GitHub Username: %s%n",students.get(input).getName(),input);
@@ -36,6 +36,7 @@ public class GradesApplication {
             if (input.toLowerCase().equals("y") || input.toLowerCase().equals("yes")){
                 continue;
             }else {
+                System.out.println("Goodbye!");
                 running = false;
             }
         }
